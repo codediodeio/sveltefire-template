@@ -8,7 +8,7 @@
   import "firebase/analytics";
 
   let firebaseConfig = {
-	// Insert Firebase Credentials here
+  // Insert Firebase Credentials here
   };
 
   firebase.initializeApp(firebaseConfig);
@@ -28,7 +28,7 @@
   <!-- 1. 🔥 Firebase App -->
   <FirebaseApp {firebase}>
 
-    <h1>SvelteFire Mode Activated</h1>
+    <h1>💪🔥 Mode Activated</h1>
 
     <p>
       <strong>PRO Tip:</strong>
@@ -38,16 +38,13 @@
 
     <!-- 2. 😀 Get the current user -->
     <User let:user let:auth>
-      Howdy! User
+      Howdy 😀! User
       <em>{user.uid}</em>
 
       <button on:click={() => auth.signOut()}>Sign Out</button>
 
       <div slot="signed-out">
-        <p>
-          <strong>Step 1</strong>
-          Sign-in or create a Firebase user
-        </p>
+
         <button on:click={() => auth.signInAnonymously()}>
           Sign In Anonymously
         </button>
@@ -62,21 +59,14 @@
 
         <p>
           Document
-          <em>{postRef.path}</em>
-          created at {new Date(post.createdAt)}
+          created at <em>{new Date(post.createdAt).toLocaleString()}</em>
         </p>
 
         <span slot="loading">Loading post...</span>
         <span slot="fallback">
-          <p>
-            <strong>Step 2</strong>
-            Push the button below to create a document in Firestore for this
-            user.
-          </p>
-
           <button
             on:click={() => postRef.set({
-                title: 'I like Svelte',
+                title: '📜 I like Svelte',
                 createdAt: Date.now()
               })}>
             Create Document
@@ -94,15 +84,12 @@
           log>
 
           {#if !comments.length}
-            <p>
-              <strong>Step 3</strong>
-              Add comments to the document's subcollection
-            </p>
+              No comments yet...
           {/if}
 
           {#each comments as comment}
             <p>
-              <em>{comment.ref.path}</em>
+              <!-- ID: <em>{comment.ref.id}</em> -->
             </p>
             <p>
               {comment.text}
@@ -113,7 +100,7 @@
 
           <button
             on:click={() => commentsRef.add({
-                text: 'Me too!',
+                text: '💬 Me too!',
                 createdAt: Date.now()
               })}>
             Add Comment
