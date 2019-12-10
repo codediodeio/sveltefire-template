@@ -1,4 +1,4 @@
-A starter template for [SvelteFire](https://github.com/codediodeio/sveltefire-template). 
+A starter template for [SvelteFire](https://github.com/codediodeio/sveltefire). 
 
 ## 1. Degit the Template
 
