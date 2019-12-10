@@ -1,3 +1,5 @@
+A starter template for [SvelteFire](https://github.com/codediodeio/sveltefire-template). 
+
 ## 1. Degit the Template
 
 ```bash
