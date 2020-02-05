@@ -31,7 +31,7 @@
     <h1>💪🔥 Mode Activated</h1>
 
     <p>
-      <strong>PRO Tip:</strong>
+      <strong>Tip:</strong>
       Open the browser console for development logging.
     </p>
 
